@@ -73,8 +73,15 @@ PDFs zusätzlich auf GitHub Pages veröffentlicht. Dort werden sie ohne
 erzwungenen Download direkt im Browser angezeigt, unter stabilen URLs wie
 `https://starwarsfan.github.io/how-to-translate-website-on-the-fly/webseite-uebersetzen.pdf`.
 
-Voraussetzung (einmalig, nicht per Workflow möglich): In den Repo-Settings
-unter *Pages* muss als Source **"GitHub Actions"** ausgewählt sein.
+Voraussetzung (einmalig, nicht per Workflow möglich, GitHub-Repo-Settings):
+
+1. Unter *Pages* als Source **"GitHub Actions"** auswählen.
+2. Unter *Environments → github-pages → Deployment branches and tags* eine
+   Tag-Regel mit Pattern `*` hinzufügen. Die von GitHub beim ersten
+   Pages-Setup automatisch angelegte `github-pages`-Environment erlaubt per
+   Default nur Deployments vom Default-Branch – ohne diese Regel schlägt der
+   `publish-pages`-Job mit „Tag ... is not allowed to deploy to github-pages
+   due to environment protection rules" fehl.
 
 ### PDF-Fusszeile
 

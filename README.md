@@ -56,7 +56,12 @@ Zusätzlich werden dieselben PDFs auf GitHub Pages veröffentlicht. Klickt man a
 
 Diese Links sind stabil und zeigen nach jedem Release automatisch den neuesten Stand – ideal zum Verteilen an die Vereinsmitglieder.
 
-**Einmaliger manueller Schritt:** In den Repo-Settings unter *Pages* als Source **"GitHub Actions"** auswählen (Settings → Pages → Build and deployment → Source). Danach übernimmt der Workflow das Deployment automatisch bei jedem Tag.
+**Einmalige manuelle Schritte** (nicht per Workflow möglich, GitHub-Repo-Settings):
+
+1. Settings → Pages → *Build and deployment* → Source auf **"GitHub Actions"** stellen.
+2. Settings → Environments → **github-pages** → *Deployment branches and tags* → **Add deployment branch or tag rule** → Ref type **"Tag"**, Pattern `*`. Ohne diese Regel lehnt GitHub das Deployment mit „Tag ... is not allowed to deploy to github-pages due to environment protection rules“ ab, weil die automatisch angelegte `github-pages`-Environment standardmässig nur Deployments vom Default-Branch erlaubt, nicht von Tags.
+
+Danach übernimmt der Workflow das Deployment automatisch bei jedem Tag.
 
 Ein neues Release erstellen:
 
