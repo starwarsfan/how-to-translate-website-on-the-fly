@@ -24,6 +24,9 @@ für beliebige Webseiten.
 - `webseite-uebersetzen-fr.md` – französische Übersetzung
 - `webseite-uebersetzen-it.md` – italienische Übersetzung
 - `.github/workflows/release.yml` – GitHub-Actions-Workflow für den PDF-Release
+- `scripts/build-pdfs.sh` – einzige Quelle der Konvertierungslogik MD→PDF;
+  wird sowohl vom Workflow als auch für lokale Tests aufgerufen (kein
+  duplizierter Code)
 
 Alle drei Sprachversionen sind identisch strukturiert (gleiche Kapitel/
 Reihenfolge: Chrome, Edge, Firefox, Safari macOS, Safari iOS, Android Chrome,
@@ -37,9 +40,13 @@ Bei jedem Tag-Push auf `main` (`.github/workflows/release.yml`) wird
 automatisch ein GitHub Release erstellt:
 
 1. Prüfung, dass der Tag-Commit auf `main` liegt.
-2. Konvertierung der drei Markdown-Dateien in PDF via
+2. Aufruf von `scripts/build-pdfs.sh`, das die drei Markdown-Dateien via
    [`md-to-pdf`](https://github.com/simonhaenisch/md-to-pdf) (Chromium-basiert,
-   kein LaTeX nötig, rendert Umlaute/Akzente korrekt).
+   kein LaTeX nötig, rendert Umlaute/Akzente korrekt) in PDF konvertiert.
+   Läuft mit `--no-sandbox --disable-setuid-sandbox`, da Chrome/Puppeteer in
+   manchen Umgebungen (z. B. Ubuntu 23.10+ mit AppArmor-Restriktion für
+   unprivilegierte User-Namespaces, oder als root in CI) sonst mit
+   "No usable sandbox!" abstürzt.
 3. Veröffentlichung als GitHub-Release-Assets, benannt in der jeweiligen
    Sprache (nicht identisch zum Quelldateinamen):
 

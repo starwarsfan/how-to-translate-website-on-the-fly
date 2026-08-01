@@ -39,7 +39,7 @@ Die deutsche Version (`webseite-uebersetzen-de.md`) ist die Quelle. Bei inhaltli
 Über `.github/workflows/release.yml` wird bei jedem Tag auf `main` automatisch ein GitHub Release erstellt:
 
 1. Der Tag-Commit wird geprüft (muss auf `main` liegen).
-2. Alle drei Markdown-Dateien werden per [`md-to-pdf`](https://github.com/simonhaenisch/md-to-pdf) in PDFs konvertiert.
+2. `scripts/build-pdfs.sh` konvertiert alle drei Markdown-Dateien per [`md-to-pdf`](https://github.com/simonhaenisch/md-to-pdf) in PDFs. Dasselbe Skript dient auch dem lokalen Test (siehe unten) – so gibt es nur eine Stelle mit der Konvertierungslogik.
 3. Die PDFs werden als Assets an ein GitHub Release mit dem Tag-Namen angehängt – benannt in der jeweiligen Sprache:
 
 | Quelle | PDF-Asset |
@@ -58,3 +58,13 @@ git push origin v1.0.0
 ```
 
 Das Tag-Format ist nicht vorgeschrieben (anders als beim CalVer-Schema von OpenBridgeServer) – jeder Tag auf `main` löst den Release-Build aus.
+
+### Lokal testen
+
+Die PDF-Konvertierung (ohne Release-Erstellung) lässt sich lokal nachvollziehen:
+
+```bash
+./scripts/build-pdfs.sh
+```
+
+Das Skript ist die einzige Quelle für die Konvertierungslogik – der Release-Job ruft es 1:1 auf. Es legt die drei PDFs im Repo-Root ab (via `.gitignore` von Git ignoriert).

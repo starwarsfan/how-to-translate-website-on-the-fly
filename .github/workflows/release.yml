@@ -32,16 +32,7 @@ jobs:
           node-version: '20'
 
       - name: Convert Markdown to PDF
-        run: |
-          declare -A OUT=(
-            [webseite-uebersetzen-de]=webseite-uebersetzen
-            [webseite-uebersetzen-fr]=traduire-site-web
-            [webseite-uebersetzen-it]=tradurre-sito-web
-          )
-          for src in "${!OUT[@]}"; do
-            npx --yes md-to-pdf@5 "${src}.md"
-            mv "${src}.pdf" "${OUT[$src]}.pdf"
-          done
+        run: ./scripts/build-pdfs.sh
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
