@@ -7,7 +7,7 @@ Dieses Repository enthält eine Anleitung für Vereinsmitglieder, wie sie sich W
 ## Dateien
 
 | Datei | Sprache |
-|---|---|
+| --- | --- |
 | [`webseite-uebersetzen-de.md`](webseite-uebersetzen-de.md) | Deutsch (Original) |
 | [`webseite-uebersetzen-fr.md`](webseite-uebersetzen-fr.md) | Französisch |
 | [`webseite-uebersetzen-it.md`](webseite-uebersetzen-it.md) | Italienisch |
@@ -33,3 +33,28 @@ Jede Sprachversion ist identisch aufgebaut und beschreibt Schritt für Schritt, 
 ## Workflow bei Änderungen
 
 Die deutsche Version (`webseite-uebersetzen-de.md`) ist die Quelle. Bei inhaltlichen Änderungen (z. B. neue Browser-Version, geänderte Menüführung) müssen `-fr.md` und `-it.md` entsprechend nachgezogen werden, damit alle drei Versionen synchron bleiben.
+
+## PDF-Release
+
+Über `.github/workflows/release.yml` wird bei jedem Tag auf `main` automatisch ein GitHub Release erstellt:
+
+1. Der Tag-Commit wird geprüft (muss auf `main` liegen).
+2. Alle drei Markdown-Dateien werden per [`md-to-pdf`](https://github.com/simonhaenisch/md-to-pdf) in PDFs konvertiert.
+3. Die PDFs werden als Assets an ein GitHub Release mit dem Tag-Namen angehängt – benannt in der jeweiligen Sprache:
+
+| Quelle | PDF-Asset |
+| --- | --- |
+| `webseite-uebersetzen-de.md` | `webseite-uebersetzen.pdf` |
+| `webseite-uebersetzen-fr.md` | `traduire-site-web.pdf` |
+| `webseite-uebersetzen-it.md` | `tradurre-sito-web.pdf` |
+
+Ein neues Release erstellen:
+
+```bash
+git checkout main
+git pull
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+Das Tag-Format ist nicht vorgeschrieben (anders als beim CalVer-Schema von OpenBridgeServer) – jeder Tag auf `main` löst den Release-Build aus.
