@@ -21,13 +21,14 @@ Ce guide explique, étape par étape, comment faire traduire automatiquement le 
 Google Chrome peut détecter et traduire automatiquement les pages web.
 
 1. Ouvrez le site **bonsai-vsb.ch** dans Chrome.
-2. En haut à droite, dans la barre d'adresse, une petite icône avec deux lettres (p. ex. « DE » ou un symbole de traduction) apparaît automatiquement. Cliquez dessus.
-   - Si l'icône n'apparaît pas automatiquement : cliquez avec le bouton droit de la souris n'importe où sur la page et choisissez **« Traduire en français... »** (ou la langue souhaitée) dans le menu.
-3. Dans la fenêtre qui s'affiche, choisissez la langue souhaitée (p. ex. français ou italien).
-4. Chrome traduit immédiatement la page. Le texte reste traduit tant que vous restez sur cette page.
-5. Pour revoir le texte original : cliquez à nouveau sur l'icône de traduction dans la barre d'adresse et choisissez **« Afficher l'original »**.
+2. Cliquez en haut à droite sur les trois points (⋮) pour ouvrir le menu.
+3. Choisissez l'entrée **« Traduire... »** dans le menu.
+   - Si une petite icône (p. ex. « DE » ou un symbole de traduction) apparaît déjà automatiquement directement dans la barre d'adresse, vous pouvez aussi cliquer directement dessus.
+4. Dans la fenêtre qui s'affiche, choisissez la langue souhaitée (p. ex. français ou italien).
+5. Chrome traduit immédiatement la page. Le texte reste traduit tant que vous restez sur cette page.
+6. Pour revoir le texte original : rouvrez les trois points en haut à droite (ou l'icône dans la barre d'adresse, si présente) et choisissez **« Afficher l'original »**.
 
-**Astuce :** Vous pouvez également configurer Chrome pour qu'il propose automatiquement une traduction pour ce site à l'avenir. Cliquez pour cela sur les trois points dans la fenêtre de traduction et choisissez l'option correspondante.
+**Astuce :** Vous pouvez également configurer Chrome pour qu'il propose automatiquement une traduction pour ce site à l'avenir. Cliquez pour cela, dans la fenêtre de traduction, sur les trois points (options supplémentaires) et choisissez l'option correspondante.
 
 ---
 

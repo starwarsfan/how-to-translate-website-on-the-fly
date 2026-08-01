@@ -21,13 +21,14 @@ Diese Anleitung zeigt Schritt für Schritt, wie du dir die Inhalte von **bonsai-
 Google Chrome kann Webseiten automatisch erkennen und übersetzen.
 
 1. Öffne die Webseite **bonsai-vsb.ch** in Chrome.
-2. Rechts oben in der Adresszeile erscheint automatisch ein kleines Symbol mit zwei Buchstaben (z. B. "DE" oder ein Übersetzer-Symbol). Klicke darauf.
-   - Erscheint das Symbol nicht automatisch: Klicke mit der rechten Maustaste irgendwo auf die Seite und wähle **"Übersetzen in Deutsch..."** (bzw. deine gewünschte Sprache) aus dem Menü.
-3. Wähle im Popup-Fenster deine gewünschte Sprache aus (z. B. Französisch oder Italienisch).
-4. Chrome übersetzt die Seite sofort. Der Text bleibt übersetzt, solange du auf dieser Seite bist.
-5. Möchtest du wieder den Originaltext sehen: Klicke erneut auf das Übersetzer-Symbol in der Adresszeile und wähle **"Original anzeigen"**.
+2. Klicke oben rechts auf die drei Punkte (⋮), um das Menü zu öffnen.
+3. Wähle im Menü den Eintrag **"Übersetzen..."** aus.
+   - Zeigt Chrome stattdessen bereits automatisch ein kleines Symbol (z. B. "DE" oder ein Übersetzer-Symbol) direkt in der Adresszeile an, kannst du auch direkt darauf klicken.
+4. Wähle im sich öffnenden Fenster deine gewünschte Sprache aus (z. B. Französisch oder Italienisch).
+5. Chrome übersetzt die Seite sofort. Der Text bleibt übersetzt, solange du auf dieser Seite bist.
+6. Möchtest du wieder den Originaltext sehen: Öffne erneut die drei Punkte oben rechts (bzw. das Symbol in der Adresszeile, falls vorhanden) und wähle **"Original anzeigen"**.
 
-**Tipp:** Du kannst Chrome auch so einstellen, dass es dir bei dieser Webseite künftig immer automatisch eine Übersetzung anbietet. Klicke dazu auf die drei Punkte im Übersetzer-Popup und wähle die entsprechende Option.
+**Tipp:** Du kannst Chrome auch so einstellen, dass es dir bei dieser Webseite künftig immer automatisch eine Übersetzung anbietet. Klicke dazu im Übersetzungsfenster auf die drei Punkte (weitere Optionen) und wähle die entsprechende Option.
 
 ---
 

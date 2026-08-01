@@ -21,13 +21,14 @@ Questa guida spiega passo per passo come far tradurre automaticamente i contenut
 Google Chrome è in grado di riconoscere e tradurre automaticamente le pagine web.
 
 1. Apri il sito **bonsai-vsb.ch** in Chrome.
-2. In alto a destra, nella barra degli indirizzi, appare automaticamente una piccola icona con due lettere (ad es. "DE" o un simbolo di traduzione). Clicca su di essa.
-   - Se l'icona non appare automaticamente: clicca con il tasto destro del mouse in un punto qualsiasi della pagina e seleziona **"Traduci in italiano..."** (o la lingua desiderata) dal menu.
-3. Nella finestra che si apre, scegli la lingua desiderata (ad es. italiano o francese).
-4. Chrome traduce immediatamente la pagina. Il testo rimane tradotto finché resti su questa pagina.
-5. Per tornare al testo originale: clicca di nuovo sull'icona di traduzione nella barra degli indirizzi e seleziona **"Mostra originale"**.
+2. Clicca in alto a destra sui tre puntini (⋮) per aprire il menu.
+3. Seleziona la voce **"Traduci..."** dal menu.
+   - Se invece appare già automaticamente una piccola icona (ad es. "DE" o un simbolo di traduzione) direttamente nella barra degli indirizzi, puoi anche cliccare direttamente su di essa.
+4. Nella finestra che si apre, scegli la lingua desiderata (ad es. italiano o francese).
+5. Chrome traduce immediatamente la pagina. Il testo rimane tradotto finché resti su questa pagina.
+6. Per tornare al testo originale: riapri i tre puntini in alto a destra (oppure l'icona nella barra degli indirizzi, se presente) e seleziona **"Mostra originale"**.
 
-**Suggerimento:** puoi anche configurare Chrome affinché in futuro ti proponga automaticamente una traduzione per questo sito. Clicca sui tre puntini nella finestra di traduzione e scegli l'opzione corrispondente.
+**Suggerimento:** puoi anche configurare Chrome affinché in futuro ti proponga automaticamente una traduzione per questo sito. Clicca, nella finestra di traduzione, sui tre puntini (altre opzioni) e scegli l'opzione corrispondente.
 
 ---
 
