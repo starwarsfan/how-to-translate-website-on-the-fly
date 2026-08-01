@@ -59,12 +59,20 @@ git push origin v1.0.0
 
 Das Tag-Format ist nicht vorgeschrieben (anders als beim CalVer-Schema von OpenBridgeServer) – jeder Tag auf `main` löst den Release-Build aus.
 
+Jedes PDF enthält eine Fusszeile mit Version, Build-Datum und Seitenzahl
+(z. B. „Version v1.0.0 · 01.08.2026 · 1 / 3“). Im Release-Workflow ist die
+Version der Tag-Name (`VERSION: ${{ github.ref_name }}`); lokal fällt sie
+mangels Tag auf die Ausgabe von `git describe --tags --always` bzw. `dev`
+zurück.
+
 ### Lokal testen
 
 Die PDF-Konvertierung (ohne Release-Erstellung) lässt sich lokal nachvollziehen:
 
 ```bash
 ./scripts/build-pdfs.sh
+# oder mit expliziter Version in der Fusszeile:
+VERSION=v1.0.0 ./scripts/build-pdfs.sh
 ```
 
 Das Skript ist die einzige Quelle für die Konvertierungslogik – der Release-Job ruft es 1:1 auf. Es legt die drei PDFs im Repo-Root ab (via `.gitignore` von Git ignoriert).

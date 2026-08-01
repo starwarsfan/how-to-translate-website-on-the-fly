@@ -61,3 +61,14 @@ Das Tag-Format ist nicht vorgeschrieben (kein CalVer-Zwang) – jeder Tag auf
 Origin-Branch-Validierung, Release über `softprops/action-gh-release`) ist das
 Vorgehen im OpenBridgeServer-Repository, hier jedoch bewusst schlank gehalten
 (kein Docker, keine CalVer-/RC-Logik).
+
+### PDF-Fusszeile
+
+`build-pdfs.sh` baut über Puppeteers `--pdf-options` (headerTemplate leer,
+footerTemplate mit Inline-HTML) eine Fusszeile mit Version, Build-Datum und
+Seitenzahl, z. B. „Version v1.0.0 · 01.08.2026 · 1 / 3“. Die Version kommt aus
+der Env-Var `VERSION` – im Workflow gesetzt auf `${{ github.ref_name }}`
+(also den Tag), lokal ohne gesetzte Variable per Fallback auf
+`git describe --tags --always` bzw. `dev`. Das JSON für `--pdf-options` wird
+bewusst über einen kleinen `node -e`-Einzeiler statt per Shell-String gebaut,
+um Quoting-Probleme mit den verschachtelten Anführungszeichen zu vermeiden.

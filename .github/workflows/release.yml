@@ -33,6 +33,8 @@ jobs:
 
       - name: Convert Markdown to PDF
         run: ./scripts/build-pdfs.sh
+        env:
+          VERSION: ${{ github.ref_name }}
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
