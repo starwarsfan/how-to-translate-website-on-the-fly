@@ -48,6 +48,16 @@ Die deutsche Version (`webseite-uebersetzen-de.md`) ist die Quelle. Bei inhaltli
 | `webseite-uebersetzen-fr.md` | `traduire-site-web.pdf` |
 | `webseite-uebersetzen-it.md` | `tradurre-sito-web.pdf` |
 
+Zusätzlich werden dieselben PDFs auf GitHub Pages veröffentlicht. Klickt man auf einen Release-Asset-Link direkt, erzwingt GitHub einen Download (`Content-Disposition: attachment`, nicht abschaltbar). Über GitHub Pages öffnen sich die PDFs dagegen direkt im Browser:
+
+- https://starwarsfan.github.io/how-to-translate-website-on-the-fly/webseite-uebersetzen.pdf
+- https://starwarsfan.github.io/how-to-translate-website-on-the-fly/traduire-site-web.pdf
+- https://starwarsfan.github.io/how-to-translate-website-on-the-fly/tradurre-sito-web.pdf
+
+Diese Links sind stabil und zeigen nach jedem Release automatisch den neuesten Stand – ideal zum Verteilen an die Vereinsmitglieder.
+
+**Einmaliger manueller Schritt:** In den Repo-Settings unter *Pages* als Source **"GitHub Actions"** auswählen (Settings → Pages → Build and deployment → Source). Danach übernimmt der Workflow das Deployment automatisch bei jedem Tag.
+
 Ein neues Release erstellen:
 
 ```bash

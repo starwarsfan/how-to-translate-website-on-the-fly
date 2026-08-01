@@ -62,6 +62,20 @@ Origin-Branch-Validierung, Release über `softprops/action-gh-release`) ist das
 Vorgehen im OpenBridgeServer-Repository, hier jedoch bewusst schlank gehalten
 (kein Docker, keine CalVer-/RC-Logik).
 
+### GitHub Pages für Direktanzeige der PDFs
+
+GitHub liefert Release-Assets grundsätzlich mit
+`Content-Disposition: attachment` aus – das erzwingt in jedem Browser einen
+Download-Dialog und lässt sich nicht per Workflow-Konfiguration abschalten.
+Deshalb gibt es einen zweiten Job `publish-pages`, der dieselben (im
+`release`-Job einmal gebauten, per `actions/upload-artifact` durchgereichten)
+PDFs zusätzlich auf GitHub Pages veröffentlicht. Dort werden sie ohne
+erzwungenen Download direkt im Browser angezeigt, unter stabilen URLs wie
+`https://starwarsfan.github.io/how-to-translate-website-on-the-fly/webseite-uebersetzen.pdf`.
+
+Voraussetzung (einmalig, nicht per Workflow möglich): In den Repo-Settings
+unter *Pages* muss als Source **"GitHub Actions"** ausgewählt sein.
+
 ### PDF-Fusszeile
 
 `build-pdfs.sh` baut über Puppeteers `--pdf-options` (headerTemplate leer,
