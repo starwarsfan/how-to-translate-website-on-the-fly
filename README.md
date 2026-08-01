@@ -50,11 +50,12 @@ Die deutsche Version (`webseite-uebersetzen-de.md`) ist die Quelle. Bei inhaltli
 
 Zusätzlich werden dieselben PDFs auf GitHub Pages veröffentlicht. Klickt man auf einen Release-Asset-Link direkt, erzwingt GitHub einen Download (`Content-Disposition: attachment`, nicht abschaltbar). Über GitHub Pages öffnen sich die PDFs dagegen direkt im Browser:
 
+- **Startseite mit allen drei Sprachen:** https://starwarsfan.github.io/how-to-translate-website-on-the-fly/
 - https://starwarsfan.github.io/how-to-translate-website-on-the-fly/webseite-uebersetzen.pdf
 - https://starwarsfan.github.io/how-to-translate-website-on-the-fly/traduire-site-web.pdf
 - https://starwarsfan.github.io/how-to-translate-website-on-the-fly/tradurre-sito-web.pdf
 
-Diese Links sind stabil und zeigen nach jedem Release automatisch den neuesten Stand – ideal zum Verteilen an die Vereinsmitglieder.
+Diese Links sind stabil und zeigen nach jedem Release automatisch den neuesten Stand – ideal zum Verteilen an die Vereinsmitglieder. Die Startseite (`pages/index.html`, statisch im Repo gepflegt) verlinkt alle drei PDFs mit Sprachbezeichnung.
 
 **Einmalige manuelle Schritte** (nicht per Workflow möglich, GitHub-Repo-Settings):
 

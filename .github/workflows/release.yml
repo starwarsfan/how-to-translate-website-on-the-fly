@@ -73,11 +73,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
       - name: Download PDFs artifact
         uses: actions/download-artifact@v7
         with:
           name: pdfs
           path: pages-site
+
+      - name: Add index page
+        run: cp pages/index.html pages-site/index.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

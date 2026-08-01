@@ -27,6 +27,9 @@ für beliebige Webseiten.
 - `scripts/build-pdfs.sh` – einzige Quelle der Konvertierungslogik MD→PDF;
   wird sowohl vom Workflow als auch für lokale Tests aufgerufen (kein
   duplizierter Code)
+- `pages/index.html` – statische Startseite für GitHub Pages, verlinkt alle
+  drei PDFs; wird im `publish-pages`-Job unverändert neben die generierten
+  PDFs kopiert (kein Templating, da die Ziel-Dateinamen fix sind)
 
 Alle drei Sprachversionen sind identisch strukturiert (gleiche Kapitel/
 Reihenfolge: Chrome, Edge, Firefox, Safari macOS, Safari iOS, Android Chrome,
